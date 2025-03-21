@@ -1,0 +1,29 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Product Reminder ACL Configuration
+ *
+ * @category  Vendor
+ * @package   Vendor_ProductReminder
+ * @author    Yasin Cengiz Coşkun - Elryan
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Acl/etc/acl.xsd">
+    <acl>
+        <resources>
+            <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::stores">
+                    <resource id="Magento_Backend::stores_settings">
+                        <resource id="Magento_Config::config">
+                            <resource id="Vendor_ProductReminder::config" title="Product Reminder Configuration" sortOrder="50" />
+                        </resource>
+                    </resource>
+                </resource>
+                <resource id="Vendor_ProductReminder::product_reminder" title="Product Reminder" sortOrder="100">
+                    <resource id="Vendor_ProductReminder::reminder_management" title="Reminder Management" sortOrder="10" />
+                </resource>
+            </resource>
+        </resources>
+    </acl>
+</config> 

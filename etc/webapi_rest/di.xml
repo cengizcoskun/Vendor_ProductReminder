@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Product Reminder Web API Authorization Configuration
+ *
+ * @category  Vendor
+ * @package   Vendor_ProductReminder
+ * @author    Yasin Cengiz Coşkun - Elryan
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Interface preferences for API -->
+    <preference for="Vendor\ProductReminder\Api\Data\ReminderInterface" 
+                type="Vendor\ProductReminder\Model\Reminder" />
+                
+    <preference for="Vendor\ProductReminder\Api\ReminderManagementInterface"
+                type="Vendor\ProductReminder\Model\ReminderManagement" />
+                
+    <preference for="Vendor\ProductReminder\Api\ReminderRepositoryInterface"
+                type="Vendor\ProductReminder\Model\ReminderRepository" />
+</config> 

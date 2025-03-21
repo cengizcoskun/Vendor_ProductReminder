@@ -1,0 +1,24 @@
+{
+    "product_reminder": {
+        "column": {
+            "id": true,
+            "customer_id": true,
+            "product_id": true,
+            "reminder_date": true,
+            "status": true,
+            "created_at": true,
+            "updated_at": true
+        },
+        "index": {
+            "PRODUCT_REMINDER_CUSTOMER_ID": true,
+            "PRODUCT_REMINDER_PRODUCT_ID": true,
+            "PRODUCT_REMINDER_REMINDER_DATE": true,
+            "PRODUCT_REMINDER_STATUS": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "PRODUCT_REMINDER_CUSTOMER_ID_CUSTOMER_ENTITY_ENTITY_ID": true,
+            "PRODUCT_REMINDER_PRODUCT_ID_CATALOG_PRODUCT_ENTITY_ENTITY_ID": true
+        }
+    }
+}

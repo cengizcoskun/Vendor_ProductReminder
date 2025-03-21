@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Product Reminder Cron Configuration
+ *
+ * @category  Vendor
+ * @package   Vendor_ProductReminder
+ * @author    Yasin Cengiz Coşkun - Elryan
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Cron:etc/crontab.xsd">
+    <group id="default">
+        <job name="vendor_product_reminder_send_emails" instance="Vendor\ProductReminder\Cron\SendReminders" method="execute">
+            <schedule>0 13 * * *</schedule> <!-- Run at 13:00 every day -->
+        </job>
+        <job name="vendor_product_reminder_send_advance_notice" instance="Vendor\ProductReminder\Cron\SendAdvanceNotice" method="execute">
+            <schedule>0 13 * * *</schedule> <!-- Run at 13:00 every day -->
+        </job>
+    </group>
+</config> 

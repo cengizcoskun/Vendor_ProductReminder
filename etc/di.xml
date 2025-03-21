@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Product Reminder Dependency Injection Configuration
+ *
+ * @category  Vendor
+ * @package   Vendor_ProductReminder
+ * @author    Yasin Cengiz Coşkun - Elryan
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!-- Interface preference for ReminderInterface -->
+    <preference for="Vendor\ProductReminder\Api\Data\ReminderInterface" 
+                type="Vendor\ProductReminder\Model\Reminder" />
+                
+    <!-- Interface preference for ReminderManagementInterface -->
+    <preference for="Vendor\ProductReminder\Api\ReminderManagementInterface"
+                type="Vendor\ProductReminder\Model\ReminderManagement" />
+                
+    <!-- Interface preference for ReminderRepositoryInterface -->
+    <preference for="Vendor\ProductReminder\Api\ReminderRepositoryInterface"
+                type="Vendor\ProductReminder\Model\ReminderRepository" />
+
+    <!-- Dependency injection for ReminderManagement -->
+    <type name="Vendor\ProductReminder\Model\ReminderManagement">
+        <arguments>
+            <argument name="userContext" xsi:type="object">Magento\Authorization\Model\CompositeUserContext</argument>
+            <argument name="productRepository" xsi:type="object">Magento\Catalog\Api\ProductRepositoryInterface</argument>
+        </arguments>
+    </type>
+</config> 

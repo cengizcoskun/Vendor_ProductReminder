@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Product Reminder System Configuration
+ *
+ * @category  Vendor
+ * @package   Vendor_ProductReminder
+ * @author    Yasin Cengiz Coşkun - Elryan
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
+    <system>
+        <tab id="vendor" translate="label" sortOrder="100">
+            <label>Vendor Extensions</label>
+        </tab>
+        <section id="product_reminder" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+            <label>Product Reminder</label>
+            <tab>vendor</tab>
+            <resource>Vendor_ProductReminder::config</resource>
+            <group id="general" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                <label>General Settings</label>
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Enable Module</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Enable or disable the module.</comment>
+                </field>
+                <field id="sender_email" translate="label" type="text" sortOrder="20" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Email Sender Address</label>
+                    <validate>validate-email</validate>
+                    <comment>The email address that will be used to send the reminder email.</comment>
+                </field>
+                <field id="default_message" translate="label" type="textarea" sortOrder="30" showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label>Default Reminder Message</label>
+                    <comment>The default message that will be used for the reminder email.</comment>
+                </field>
+            </group>
+        </section>
+    </system>
+</config> 

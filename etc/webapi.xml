@@ -1,0 +1,44 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Product Reminder Web API Configuration
+ *
+ * @category  Vendor
+ * @package   Vendor_ProductReminder
+ * @author    Yasin Cengiz Coşkun - Elryan
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <!-- Set Reminder -->
+    <route url="/V1/product-reminder" method="POST">
+        <service class="Vendor\ProductReminder\Api\ReminderManagementInterface" method="setReminder"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    
+    <!-- Get Customer Reminders -->
+    <route url="/V1/product-reminder/:customerId" method="GET">
+        <service class="Vendor\ProductReminder\Api\ReminderRepositoryInterface" method="getByCustomerId"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    
+    <!-- Delete Reminder -->
+    <route url="/V1/product-reminder/:id" method="DELETE">
+        <service class="Vendor\ProductReminder\Api\ReminderRepositoryInterface" method="deleteById"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+    
+    <!-- Update Reminder -->
+    <route url="/V1/product-reminder/:id" method="PUT">
+        <service class="Vendor\ProductReminder\Api\ReminderManagementInterface" method="updateReminder"/>
+        <resources>
+            <resource ref="self"/>
+        </resources>
+    </route>
+</routes> 

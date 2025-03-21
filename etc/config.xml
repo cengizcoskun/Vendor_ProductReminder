@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Product Reminder Default Configuration
+ *
+ * @category  Vendor
+ * @package   Vendor_ProductReminder
+ * @author    Yasin Cengiz Coşkun - Elryan
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+    <default>
+        <product_reminder>
+            <general>
+                <enabled>0</enabled>
+                <sender_email>reminder@elryan.com</sender_email>
+                <default_message>Don't forget about the product you were interested in!</default_message>
+            </general>
+        </product_reminder>
+    </default>
+</config> 

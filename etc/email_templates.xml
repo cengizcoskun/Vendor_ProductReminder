@@ -1,0 +1,25 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Product Reminder Email Templates
+ *
+ * @category  Vendor
+ * @package   Vendor_ProductReminder
+ * @author    Yasin Cengiz Coşkun - Elryan
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="product_reminder_email_template"
+              label="Product Reminder Email"
+              file="product_reminder.html"
+              type="html"
+              module="Vendor_ProductReminder"
+              area="frontend"/>
+    <template id="product_reminder_advance_notice_template"
+              label="Product Reminder Advance Notice Email"
+              file="product_reminder_advance_notice.html"
+              type="html"
+              module="Vendor_ProductReminder"
+              area="frontend"/>
+</config> 

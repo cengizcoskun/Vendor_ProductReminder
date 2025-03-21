@@ -1,0 +1,17 @@
+<!--@subject {{trans "Your Product Reminder"}} @-->
+<!--@vars {
+"var product_name":"Product Name",
+"var customer_name":"Customer Name",
+"var reminder_message":"Reminder Message",
+"var store.frontend_name":"Store Name"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<p>{{trans "Hello %customer_name," customer_name=$customer_name}}</p>
+<p>{{trans "This is a reminder about a product you were interested in:"}}</p>
+<p><strong>{{var product_name}}</strong></p>
+<p>{{var reminder_message}}</p>
+<p>{{trans "You can visit the product by clicking the link below:"}}</p>
+
+{{template config_path="design/email/footer_template"}} 

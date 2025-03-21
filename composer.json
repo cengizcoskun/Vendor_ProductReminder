@@ -1,0 +1,27 @@
+{
+    "name": "vendor/module-product-reminder",
+    "description": "Product Reminder Module for Magento 2 - Elryan",
+    "type": "magento2-module",
+    "license": "GPL-3.0",
+    "authors": [
+        {
+            "name": "Yasin Cengiz Coskun",
+            "email": "y.cengiz.cengiz@gmail.com"
+        }
+    ],
+    "minimum-stability": "dev",
+    "require": {
+        "php": "~7.3.0||~7.4.0||~8.1.0",
+        "magento/framework": "103.0.*",
+        "magento/module-customer": "103.0.*",
+        "magento/module-catalog": "104.0.*"
+    },
+    "autoload": {
+        "files": [
+            "registration.php"
+        ],
+        "psr-4": {
+            "Vendor\\ProductReminder\\": ""
+        }
+    }
+}
